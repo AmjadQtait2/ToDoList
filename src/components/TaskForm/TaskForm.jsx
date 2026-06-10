@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import "./TaskForm.css";
+import styles from "./TaskForm.module.css";
 
 const TaskForm = ({ onAddTask }) => {
   const {
@@ -15,9 +15,9 @@ const TaskForm = ({ onAddTask }) => {
   };
 
   return (
-    <form className="task-form" onSubmit={handleSubmit(onSubmit)}>
-      <div className="form-row">
-        <div className="form-group">
+    <form className={styles["task-form"]} onSubmit={handleSubmit(onSubmit)}>
+      <div className={styles["form-row"]}>
+        <div className={styles["form-group"]}>
           <label htmlFor="taskName">Task Name:</label>
           <input
             id="taskName"
@@ -32,11 +32,11 @@ const TaskForm = ({ onAddTask }) => {
             })}
           />
           {errors.taskName && (
-            <span className="error-msg">{errors.taskName.message}</span>
+            <span className={styles["error-msg"]}>{errors.taskName.message}</span>
           )}
         </div>
 
-        <div className="form-group">
+        <div className={styles["form-group"]}>
           <label htmlFor="priority">Priority:</label>
           <select
             id="priority"
@@ -48,11 +48,11 @@ const TaskForm = ({ onAddTask }) => {
             <option value="Low">Low</option>
           </select>
           {errors.priority && (
-            <span className="error-msg">{errors.priority.message}</span>
+            <span className={styles["error-msg"]}>{errors.priority.message}</span>
           )}
         </div>
 
-        <button type="submit" className="add-btn" disabled={!isValid}>
+        <button type="submit" className={styles["add-btn"]} disabled={!isValid}>
           Add Task
         </button>
       </div>
