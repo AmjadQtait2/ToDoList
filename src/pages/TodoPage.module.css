@@ -1,4 +1,4 @@
-.todo-page {
+.todoPage {
   min-height: 100vh;
   background-color: #f3f4f6;
   display: flex;
@@ -6,7 +6,7 @@
   padding: 40px 16px;
 }
 
-.todo-container {
+.todoContainer {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
@@ -16,7 +16,7 @@
   height: fit-content;
 }
 
-.todo-title {
+.todoTitle {
   text-align: center;
   font-size: 28px;
   font-weight: 700;

@@ -1,13 +1,13 @@
 import TaskItem from "../TaskItem/TaskItem";
-import "./TaskList.css";
+import styles from "./TaskList.module.css";
 
 const TaskList = ({ tasks, onDelete, onToggleComplete, onToggleEdit, onUpdateName }) => {
   if (tasks.length === 0) {
-    return <p className="empty-msg">No tasks yet!</p>;
+    return <p className={styles.emptyMsg}>No tasks yet!</p>;
   }
 
   return (
-    <div className="task-list">
+    <div className={styles.taskList}>
       {tasks.map((task) => (
         <TaskItem
           key={task.id}
