@@ -1,7 +1,7 @@
-import TaskForm from "../../components/TaskForm/TaskForm";
-import FilterButtons from "../../components/FilterButtons/FilterButtons";
-import TaskList from "../../components/TaskList/TaskList";
-import useTasks from "../../hooks/useTasks";
+import TaskForm from "../components/TaskForm/TaskForm";
+import FilterButtons from "../components/FilterButtons/FilterButtons";
+import TaskList from "../components/TaskList/TaskList";
+import useTasks from "../hooks/useTasks";
 import styles from "./TodoPage.module.css";
 
 const TodoPage = () => {
