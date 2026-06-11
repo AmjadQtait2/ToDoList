@@ -1,9 +1,9 @@
-.task-list {
+.taskList {
   display: flex;
   flex-direction: column;
 }
 
-.empty-msg {
+.emptyMsg {
   text-align: center;
   color: #888;
   font-size: 16px;

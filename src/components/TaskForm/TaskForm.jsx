@@ -15,9 +15,9 @@ const TaskForm = ({ onAddTask }) => {
   };
 
   return (
-    <form className={styles["task-form"]} onSubmit={handleSubmit(onSubmit)}>
-      <div className={styles["form-row"]}>
-        <div className={styles["form-group"]}>
+    <form className={styles.taskForm} onSubmit={handleSubmit(onSubmit)}>
+      <div className={styles.formRow}>
+        <div className={styles.formGroup}>
           <label htmlFor="taskName">Task Name:</label>
           <input
             id="taskName"
@@ -32,11 +32,11 @@ const TaskForm = ({ onAddTask }) => {
             })}
           />
           {errors.taskName && (
-            <span className={styles["error-msg"]}>{errors.taskName.message}</span>
+            <span className={styles.errorMsg}>{errors.taskName.message}</span>
           )}
         </div>
 
-        <div className={styles["form-group"]}>
+        <div className={styles.formGroup}>
           <label htmlFor="priority">Priority:</label>
           <select
             id="priority"
@@ -48,11 +48,11 @@ const TaskForm = ({ onAddTask }) => {
             <option value="Low">Low</option>
           </select>
           {errors.priority && (
-            <span className={styles["error-msg"]}>{errors.priority.message}</span>
+            <span className={styles.errorMsg}>{errors.priority.message}</span>
           )}
         </div>
 
-        <button type="submit" className={styles["add-btn"]} disabled={!isValid}>
+        <button type="submit" className={styles.addBtn} disabled={!isValid}>
           Add Task
         </button>
       </div>

@@ -1,4 +1,4 @@
-.filter-container {
+.filterContainer {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -6,18 +6,18 @@
   flex-wrap: wrap;
 }
 
-.filter-label {
+.filterLabel {
   font-weight: 600;
   font-size: 14px;
   color: #333;
 }
 
-.filter-buttons {
+.filterButtons {
   display: flex;
   gap: 8px;
 }
 
-.filter-btn {
+.filterBtn {
   padding: 6px 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -28,11 +28,11 @@
   transition: all 0.2s;
 }
 
-.filter-btn:hover {
+.filterBtn:hover {
   background: #e0e0e0;
 }
 
-.filter-btn.active {
+.filterBtn.active {
   background-color: #2563eb;
   color: white;
   border-color: #2563eb;

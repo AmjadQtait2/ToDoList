@@ -17,10 +17,10 @@ const TodoPage = () => {
   } = useTasks();
 
   return (
-    <div className={styles["todo-page"]}>
-      <div className={styles["todo-container"]}>
-        <h1 className={styles["todo-title"]}>To-Do List</h1>
-        <hr className={styles["divider"]} />
+    <div className={styles.todoPage}>
+      <div className={styles.todoContainer}>
+        <h1 className={styles.todoTitle}>To-Do List</h1>
+        <hr className={styles.divider} />
 
         <TaskForm onAddTask={addTask} />
 

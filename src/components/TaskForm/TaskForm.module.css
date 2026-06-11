@@ -1,4 +1,4 @@
-.task-form {
+.taskForm {
   background: #fff;
   padding: 16px;
   border-radius: 8px;
@@ -6,27 +6,27 @@
   border: 1px solid #e0e0e0;
 }
 
-.form-row {
+.formRow {
   display: flex;
   align-items: flex-start;
   gap: 16px;
   flex-wrap: wrap;
 }
 
-.form-group {
+.formGroup {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.form-group label {
+.formGroup label {
   font-weight: 600;
   font-size: 14px;
   color: #333;
 }
 
-.form-group input,
-.form-group select {
+.formGroup input,
+.formGroup select {
   padding: 8px 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -34,18 +34,18 @@
   min-width: 180px;
 }
 
-.form-group input:focus,
-.form-group select:focus {
+.formGroup input:focus,
+.formGroup select:focus {
   outline: none;
   border-color: #2563eb;
 }
 
-.error-msg {
+.errorMsg {
   color: #dc2626;
   font-size: 12px;
 }
 
-.add-btn {
+.addBtn {
   padding: 8px 20px;
   background-color: #2563eb;
   color: white;
@@ -59,11 +59,11 @@
   transition: background-color 0.2s;
 }
 
-.add-btn:hover:not(:disabled) {
+.addBtn:hover:not(:disabled) {
   background-color: #1d4ed8;
 }
 
-.add-btn:disabled {
+.addBtn:disabled {
   background-color: #93c5fd;
   cursor: not-allowed;
 }

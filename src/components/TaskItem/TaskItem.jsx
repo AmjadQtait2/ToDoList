@@ -2,7 +2,7 @@ import styles from "./TaskItem.module.css";
 
 const PRIORITY_COLORS = {
   High: "red",
-  Medium: "Yellow",
+  Medium: "yellow",
   Low: "green",
 };
 
@@ -10,11 +10,11 @@ const TaskItem = ({ task, onDelete, onToggleComplete, onToggleEdit, onUpdateName
   const borderColor = PRIORITY_COLORS[task.priority];
 
   return (
-    <div className={styles["task-item"]} style={{ borderLeftColor: borderColor }}>
-      <div className={styles["task-info"]}>
+    <div className={styles.taskItem} style={{ borderLeftColor: borderColor }}>
+      <div className={styles.taskInfo}>
         {task.isEditing ? (
           <input
-            className={styles["edit-input"]}
+            className={styles.editInput}
             type="text"
             value={task.name}
             onChange={(e) => onUpdateName(task.id, e.target.value)}
@@ -23,27 +23,28 @@ const TaskItem = ({ task, onDelete, onToggleComplete, onToggleEdit, onUpdateName
           />
         ) : (
           <span
-            className={`${styles["task-name"]} ${task.completed ? styles["completed"] : ""}`}
+            className={`${styles.taskName} ${task.completed ? styles.completed : ""}`}
             onClick={() => onToggleEdit(task.id)}
             title="Click to edit"
           >
             {task.name}
           </span>
         )}
-        <span className={styles["task-priority"]}>{task.priority} Priority</span>
+        <span className={styles.taskPriority}>{task.priority} Priority</span>
       </div>
 
-      <div className={styles["task-actions"]}>
+      
+      <div className={styles.taskActions}>
         {task.completed ? (
-          <button className={styles["undo-btn"]} onClick={() => onToggleComplete(task.id)}>
+          <button className={styles.undoBtn} onClick={() => onToggleComplete(task.id)}>
             Undo
           </button>
         ) : (
-          <button className={styles["done-btn"]} onClick={() => onToggleComplete(task.id)}>
+          <button className={styles.doneBtn} onClick={() => onToggleComplete(task.id)}>
             Done
           </button>
         )}
-        <button className={styles["delete-btn"]} onClick={() => onDelete(task.id)}>
+        <button className={styles.deleteBtn} onClick={() => onDelete(task.id)}>
           Delete
         </button>
       </div>
